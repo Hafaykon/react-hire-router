@@ -3,6 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import './App.css'
 import Dashboard from './pages/Dashboard';
 import PersonProfile from './pages/PersonProfile';
+import ProfileEdit from './pages/PersonProfile/ProfileEdit';
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Dashboard people={people} hiredPeople={hiredPeople} />} />
         <Route path="view/:id" element={<PersonProfile people={people} hiredPeople={hiredPeople} setHiredPeople={setHiredPeople}/>} />
+        <Route path="view/:id/edit" element={<ProfileEdit people={people} setPeople={setPeople} />} />
       </Routes>
     </>
   )
